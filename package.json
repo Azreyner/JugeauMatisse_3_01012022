@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.sass:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Azreyner/JugeauMatisse_3_01012022.git"
+  },
+  "author": "Matisse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Azreyner/JugeauMatisse_3_01012022/issues"
+  },
+  "homepage": "https://github.com/Azreyner/JugeauMatisse_3_01012022#readme"
+}

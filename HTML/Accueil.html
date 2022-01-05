@@ -4,11 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Ohmyfood!</title>
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <div class="blocGeneral">
+        <header class="header">
+            <h1 class="header__titre">ohmyfood</h1>
+        </header>
+        <main>
+            <div class="explorateur">
+                <div class="explorateur__rechercher">
+                    <i class="fas fa-map-marker-alt" data-fa-transform="shrink-8 down-6"></i>
+                    <input type="text" >
+                </div>
+                <h3 class="explorateur__titre">Réservez le menu qui vous convient</h3>
+                <p class="exporateur__text">Découvrez des restaurants d'exception, séléctionnées par nos soins.</p>
+                <button>Explorer nos restaurants</button>
+            </div>
+            <div class="fonctionnement">
+                <div class="fonctionnement__block">
+                    <p class="numberCircle">1</p>
+                    <i class="fas fa-mobile-alt"></i>
+                    <p class="textList">Choisissez un restaurant</p>
+                </div>
+                <div class="fonctionnement__block">
+                    <p class="numberCircle">2</p>
+                    <i class="fas fa-list"></i>
+                    <p class="textList">Composez votre menu</p>
+                </div>
+                <div class="fonctionnement__block">
+                    <p class="numberCircle">3</p>
+                    <i class="fas fa-store"></i>
+                    <p class="textList">Dégustez au restaurant</p>
+                </div>
+            </div>
+            <div class="restaurants">
+                <!-- PREMIER RESTAURANT -->
+                <a class="restaurants__carte" >
+                    <img src="" alt="Image du restaurant">
+                    <div class="infosRestaurant">
+                        <div>
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </a>
+                <!-- DEUXIEME RESTAURANT -->
+                <a class="restaurants__carte" >
+                    <img src="" alt="Image du restaurant">
+                    <div class="infosRestaurant">
+                        <div>
+                            <h3>La note enchantée</h3>
+                            <p>Charonne</p>
+                        </div>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </a>
+                <!-- TROISIEME RESTAURANT -->
+                <a class="restaurants__carte" >
+                    <img src="" alt="Image du restaurant">
+                    <div class="infosRestaurant">
+                        <div>
+                            <h3>A la française</h3>
+                            <p>Cité Rouge</p>
+                        </div>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </a>
+                <!-- QUATRIEME RESTAURANT -->
+                <a class="restaurants__carte" >
+                    <img src="" alt="Image du restaurant">
+                    <div class="infosRestaurant">
+                        <div>
+                            <h3>Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </a>
+            </div>
+        </main>
+        <footer class="footer">
+            <h1 class="footer__titre">ohmyfood</h1>
+            <ul class="footer_liste">
+                <li>Proposer un restaurant</li>
+                <li>Devenir un partenaire</li>
+                <li>Mention légales</li>
+                <li>Contact</li>
+            </ul>
+        </footer>
+    </div>
 </body>
 </html>

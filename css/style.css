@@ -1,3 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+h1, h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 24px;
+}
 
+a, p, span, h3, h4, h5, li, ul, ol {
+  font-family: "Roboto";
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.blocGeneral {
+  max-width: 768px;
+  background: darkgray;
+}
 
 /*# sourceMappingURL=style.css.map */

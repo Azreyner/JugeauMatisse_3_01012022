@@ -1,0 +1,17 @@
+.unBouton{
+    all: unset;
+    cursor: pointer;
+    text-align: center;
+    padding: 15px 0px;
+    width: 225px;
+    margin-top: 25px;
+    border-radius: 50px;
+    background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    color: white;
+    font-family:  'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+#boutonMenu{
+    margin-bottom: 100px;
+}

@@ -1,0 +1,103 @@
+/* EXPLORATEUR */
+.explorateur{
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #ebe8e8;
+    min-height: 300px;
+    &__rechercher{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        height: 50px;
+        background-color: #d3d3d3;
+        & .iconeGmap{
+            display: flex;
+            align-items: center;
+
+        }
+        & input{
+            all: unset;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            color: rgb(0, 0, 0);
+            width: 150px;
+        }
+    }
+    &__map{
+        padding: 50px 25px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-between;
+        & h3{
+            text-align: center;
+            font-size: 24px;
+        }
+        & p{
+            text-align: center;
+        }
+    }
+}
+
+/* FONCTIONNEMENT */
+.fonctionnement{
+    margin: 50px 0px;
+    &__titre{
+        margin: 0 20px;
+    }
+    &__block{
+        background-color: #ebe8e8;
+        border-radius: 15px;
+        margin: 25px;
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        @include boxshadow;
+        & .numberCircle{
+            color: white;
+            font-size: 12px;
+            background-color: $color-primary;
+            padding: 4px 7px 3px 7px;
+            border-radius: 100px;
+            margin-left: -10px;
+        }
+        & .monIcone{
+            margin: 0 20px;
+            color: rgb(68, 68, 68);
+        }
+    }
+}
+
+/* RESTAURANTS */
+.restaurants{
+    &__titre{
+        margin: 0 25px;
+    }
+    &__carte{
+        display:block;
+        height: 200px;
+        @include boxshadow;
+        border-radius: 15px;
+        margin: 25px;
+        text-decoration: none;
+        & img{
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        & .infosRestaurant{
+            height: 30%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            padding: 10px;
+            color: rgb(0, 0, 0);
+            & p{
+                font-size: 12px;
+            }
+        }
+    }
+}

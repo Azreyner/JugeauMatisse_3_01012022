@@ -1,0 +1,14 @@
+.footer{
+    background-color: #323435;
+    padding: 25px;
+    &__titre{
+        color: rgb(255, 248, 248);
+        font-size: 16px;
+        font-weight: 300;
+    }
+    &__liste{
+        margin-top: 10px;
+        color: rgb(255, 248, 248);
+        list-style: none;
+    }
+}

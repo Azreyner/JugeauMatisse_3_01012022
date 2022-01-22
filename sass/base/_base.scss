@@ -1,16 +1,18 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
-.blocGeneral{
-    max-width: 500px;
+.blocGeneral {
+  max-width: 500px;
+  position: relative;
+  z-index: 0;
 }

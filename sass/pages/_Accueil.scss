@@ -1,103 +1,191 @@
+/* SPINNER */
+#blocSpinner {
+  height: 400px;
+  width: 470px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  position: absolute;
+  z-index: 1;
+  @include boxshadow;
+  background: white;
+  animation: insideBloc 1s 3s forwards;
+  & h3 {
+    margin-bottom: -100px;
+  }
+  & h3::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #9356dc;
+    border-top-color: #b35cdc;
+    border-right-color: #cf64dc;
+    border-bottom-color: #ff79da;
+    animation: spinner 0.6s linear infinite;
+  }
+}
+
 /* EXPLORATEUR */
-.explorateur{
+.explorateur {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #ebe8e8;
+  min-height: 300px;
+  &__rechercher {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    height: 50px;
+    background-color: #d3d3d3;
+    & .iconeGmap {
+      display: flex;
+      align-items: center;
+    }
+    & input {
+      all: unset;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      color: rgb(0, 0, 0);
+      width: 150px;
+    }
+  }
+  &__map {
+    padding: 50px 25px;
     display: flex;
     flex-flow: column nowrap;
-    background-color: #ebe8e8;
-    min-height: 300px;
-    &__rechercher{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        height: 50px;
-        background-color: #d3d3d3;
-        & .iconeGmap{
-            display: flex;
-            align-items: center;
-
-        }
-        & input{
-            all: unset;
-            text-align: center;
-            font-family: 'Roboto', sans-serif;
-            font-size: 18px;
-            color: rgb(0, 0, 0);
-            width: 150px;
-        }
+    align-items: center;
+    justify-content: space-between;
+    & h3 {
+      text-align: center;
+      font-size: 24px;
     }
-    &__map{
-        padding: 50px 25px;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        justify-content: space-between;
-        & h3{
-            text-align: center;
-            font-size: 24px;
-        }
-        & p{
-            text-align: center;
-        }
+    & p {
+      text-align: center;
     }
+  }
 }
 
 /* FONCTIONNEMENT */
-.fonctionnement{
-    margin: 50px 0px;
-    &__titre{
-        margin: 0 20px;
+.fonctionnement {
+  margin: 50px 0px;
+  &__titre {
+    margin: 0 20px;
+  }
+  &__block {
+    background-color: #ebe8e8;
+    border-radius: 15px;
+    margin: 25px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    @include boxshadow;
+    & .numberCircle {
+      color: white;
+      font-size: 12px;
+      background-color: $color-primary;
+      padding: 4px 7px 3px 7px;
+      border-radius: 100px;
+      margin-left: -10px;
     }
-    &__block{
-        background-color: #ebe8e8;
-        border-radius: 15px;
-        margin: 25px;
-        padding: 20px 0;
-        display: flex;
-        align-items: center;
-        @include boxshadow;
-        & .numberCircle{
-            color: white;
-            font-size: 12px;
-            background-color: $color-primary;
-            padding: 4px 7px 3px 7px;
-            border-radius: 100px;
-            margin-left: -10px;
-        }
-        & .monIcone{
-            margin: 0 20px;
-            color: rgb(68, 68, 68);
-        }
+    & .monIcone {
+      margin: 0 20px;
+      color: rgb(68, 68, 68);
     }
+  }
 }
 
 /* RESTAURANTS */
-.restaurants{
-    &__titre{
-        margin: 0 25px;
+.restaurants {
+  &__titre {
+    margin: 0 25px;
+  }
+  &__carte {
+    display: block;
+    height: 200px;
+    @include boxshadow;
+    border-radius: 15px;
+    margin: 25px;
+    text-decoration: none;
+    & img {
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
     }
-    &__carte{
-        display:block;
-        height: 200px;
-        @include boxshadow;
-        border-radius: 15px;
-        margin: 25px;
-        text-decoration: none;
-        & img{
-            width: 100%;
-            height: 70%;
-            object-fit: cover;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
+    & .infosRestaurant {
+      height: 30%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding: 10px;
+      color: rgb(0, 0, 0);
+      & p {
+        font-size: 12px;
+      }
+      & .coeur {
+        cursor: pointer;
+        &--vide {
+          opacity: 1;
+          -webkit-transition: opacity 1s;
+          transition: opacity 1s;
         }
-        & .infosRestaurant{
-            height: 30%;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            padding: 10px;
-            color: rgb(0, 0, 0);
-            & p{
-                font-size: 12px;
-            }
+        &--rempli {
+          position: relative;
+          top: -21px;
+          opacity: 0;
+          -webkit-transition: opacity 1s;
+          transition: opacity 1s;
+          & .fas {
+            -webkit-transition: opacity 1s;
+            transition: opacity 1s;
+            line-height: 1;
+            z-index: 1;
+            background: -webkit-linear-gradient(
+              #9356dc,
+              #b35cdc,
+              #cf64dc,
+              #e86edb,
+              #ff79da
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
         }
+        &:hover {
+          & .coeur--vide {
+            opacity: 0;
+          }
+          & .coeur--rempli {
+            opacity: 1;
+          }
+        }
+      }
     }
+  }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes insideBloc {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
 }

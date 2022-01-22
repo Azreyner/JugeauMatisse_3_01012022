@@ -1,17 +1,32 @@
-.unBouton{
-    all: unset;
-    cursor: pointer;
-    text-align: center;
-    padding: 15px 0px;
-    width: 225px;
-    margin-top: 25px;
-    border-radius: 50px;
-    background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-    color: white;
-    font-family:  'Roboto', sans-serif;
-    font-weight: 600;
+.unBouton {
+  all: unset;
+  cursor: pointer;
+  text-align: center;
+  padding: 15px 0px;
+  width: 225px;
+  margin-top: 25px;
+  border-radius: 50px;
+  background: #9356dc
+    linear-gradient(
+      to left top,
+      transparent,
+      #9356dc,
+      #b35cdc,
+      #cf64dc,
+      #e86edb,
+      #ff79da
+    );
+  box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  transition: all 450ms;
+  &:hover {
+    box-shadow: 0 10px 15px 1px rgba(0, 0, 0, 0.4);
+    background-color: lighten($color: #9356dc, $amount: 10%);
+  }
 }
 
-#boutonMenu{
-    margin-bottom: 100px;
+#boutonMenu {
+  margin-bottom: 100px;
 }

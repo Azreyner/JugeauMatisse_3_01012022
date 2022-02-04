@@ -68,10 +68,11 @@
       opacity: 0;
       overflow: hidden;
       & .descriptionMenu {
-        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
         & h4 {
+          overflow: hidden;
           text-overflow: ellipsis;
-          white-space: nowrap;
         }
       }
       & .detail {
@@ -79,15 +80,12 @@
         justify-content: space-between;
         font-size: 14px;
         margin-top: 5px;
+        overflow: hidden;
+        white-space: nowrap;
         & p {
           margin: 0;
-          max-width: 250px;
           overflow: hidden;
           text-overflow: ellipsis;
-          white-space: nowrap;
-          width: 250px;
-          transform: width 2s;
-          transition: 0.5s ease-in-out;
         }
       }
       & .blocCheck {
@@ -121,9 +119,6 @@
         }
       }
       &:hover {
-        & .descriptionMenu .detail p {
-          width: 200px;
-        }
         & .blocCheck {
           & p {
             transform: translateX(0px);

@@ -25,6 +25,7 @@ body {
   max-width: 500px;
   position: relative;
   z-index: 0;
+  width: 100vw;
 }
 
 .footer {
@@ -320,27 +321,25 @@ body {
   overflow: hidden;
 }
 .menu__etape .choix .descriptionMenu {
-  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu__etape .choix .descriptionMenu h4 {
+  overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .menu__etape .choix .detail {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
   margin-top: 5px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu__etape .choix .detail p {
   margin: 0;
-  max-width: 250px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 250px;
-  transform: width 2s;
-  transition: 0.5s ease-in-out;
 }
 .menu__etape .choix .blocCheck {
   display: flex;
@@ -371,9 +370,6 @@ body {
 .menu__etape .choix .blocCheck .partieVerte i {
   transform: rotateZ(-360deg);
   transition: 0.5s ease-in-out;
-}
-.menu__etape .choix:hover .descriptionMenu .detail p {
-  width: 200px;
 }
 .menu__etape .choix:hover .blocCheck p {
   transform: translateX(0px);

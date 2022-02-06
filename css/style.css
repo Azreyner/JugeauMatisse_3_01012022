@@ -362,6 +362,7 @@ body {
   justify-content: space-between;
   opacity: 0;
   overflow: hidden;
+  height: 60px;
 }
 .menu__etapes__etape .choix .descriptionMenu {
   overflow: hidden;
@@ -396,7 +397,7 @@ body {
   margin-right: 20px;
 }
 .menu__etapes__etape .choix .blocCheck .partieVerte {
-  height: 60px;
+  height: 100%;
   width: 0px;
   background-color: #99E2D0;
   color: white;

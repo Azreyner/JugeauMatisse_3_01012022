@@ -362,7 +362,7 @@ body {
   justify-content: space-between;
   opacity: 0;
   overflow: hidden;
-  height: 60px;
+  max-height: 60px;
 }
 .menu__etapes__etape .choix .descriptionMenu {
   overflow: hidden;
@@ -389,6 +389,7 @@ body {
   display: flex;
   align-items: center;
   min-width: fit-content;
+  height: 40px;
 }
 .menu__etapes__etape .choix .blocCheck p {
   align-self: flex-end;
@@ -397,8 +398,8 @@ body {
   margin-right: 20px;
 }
 .menu__etapes__etape .choix .blocCheck .partieVerte {
-  height: 100%;
   width: 0px;
+  height: 150%;
   background-color: #99E2D0;
   color: white;
   margin: -10px;

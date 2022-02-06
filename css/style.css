@@ -355,18 +355,19 @@ body {
   cursor: pointer;
   box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.1);
   background-color: white;
-  padding: 10px;
   border-radius: 15px;
   margin: 15px;
   display: flex;
   justify-content: space-between;
   opacity: 0;
   overflow: hidden;
+  height: 60px;
   max-height: 60px;
 }
 .menu__etapes__etape .choix .descriptionMenu {
   overflow: hidden;
   white-space: nowrap;
+  margin: 10px;
 }
 .menu__etapes__etape .choix .descriptionMenu h4 {
   overflow: hidden;
@@ -389,20 +390,19 @@ body {
   display: flex;
   align-items: center;
   min-width: fit-content;
-  height: 40px;
+  height: 100%;
 }
 .menu__etapes__etape .choix .blocCheck p {
   align-self: flex-end;
   font-weight: bold;
-  margin: 0px;
-  margin-right: 20px;
+  margin-right: 15px;
+  margin-bottom: 5px;
 }
 .menu__etapes__etape .choix .blocCheck .partieVerte {
   width: 0px;
-  height: 150%;
+  height: 100%;
   background-color: #99E2D0;
   color: white;
-  margin: -10px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   display: flex;

@@ -79,25 +79,27 @@
   &__titre {
     margin: 0 20px;
   }
-  &__block {
-    background-color: #ebe8e8;
-    border-radius: 15px;
-    margin: 25px;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    @include boxshadow;
-    & .numberCircle {
-      color: white;
-      font-size: 12px;
-      background-color: $color-primary;
-      padding: 4px 7px 3px 7px;
-      border-radius: 100px;
-      margin-left: -10px;
-    }
-    & .monIcone {
-      margin: 0 20px;
-      color: rgb(68, 68, 68);
+  &__blocks {
+    &__block {
+      background-color: #ebe8e8;
+      border-radius: 15px;
+      margin: 25px;
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      @include boxshadow;
+      & .numberCircle {
+        color: white;
+        font-size: 12px;
+        background-color: $color-primary;
+        padding: 4px 7px 3px 7px;
+        border-radius: 100px;
+        margin-left: -10px;
+      }
+      & .monIcone {
+        margin: 0 20px;
+        color: rgb(68, 68, 68);
+      }
     }
   }
 }
@@ -107,65 +109,70 @@
   &__titre {
     margin: 0 25px;
   }
-  &__carte {
-    display: block;
-    height: 200px;
-    @include boxshadow;
-    border-radius: 15px;
-    margin: 25px;
-    text-decoration: none;
-    & img {
-      width: 100%;
-      height: 70%;
-      object-fit: cover;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-    }
-    & .infosRestaurant {
-      height: 30%;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between;
-      padding: 10px;
-      color: rgb(0, 0, 0);
-      & p {
-        font-size: 12px;
+  &__cartes {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    &__carte {
+      display: block;
+      height: 200px;
+      @include boxshadow;
+      border-radius: 15px;
+      margin: 25px;
+      text-decoration: none;
+      & img {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
       }
-      & .coeur {
-        cursor: pointer;
-        &--vide {
-          opacity: 1;
-          -webkit-transition: opacity 1s;
-          transition: opacity 1s;
+      & .infosRestaurant {
+        height: 30%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 10px;
+        color: rgb(0, 0, 0);
+        & p {
+          font-size: 12px;
         }
-        &--rempli {
-          position: relative;
-          top: -21px;
-          opacity: 0;
-          -webkit-transition: opacity 1s;
-          transition: opacity 1s;
-          & .fas {
+        & .coeur {
+          cursor: pointer;
+          &--vide {
+            opacity: 1;
             -webkit-transition: opacity 1s;
             transition: opacity 1s;
-            line-height: 1;
-            z-index: 1;
-            background: -webkit-linear-gradient(
-              #9356dc,
-              #b35cdc,
-              #cf64dc,
-              #e86edb,
-              #ff79da
-            );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
           }
-        }
-        &:hover {
-          & .coeur--vide {
+          &--rempli {
+            position: relative;
+            top: -21px;
             opacity: 0;
+            -webkit-transition: opacity 1s;
+            transition: opacity 1s;
+            & .fas {
+              -webkit-transition: opacity 1s;
+              transition: opacity 1s;
+              line-height: 1;
+              z-index: 1;
+              background: -webkit-linear-gradient(
+                #9356dc,
+                #b35cdc,
+                #cf64dc,
+                #e86edb,
+                #ff79da
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
           }
-          & .coeur--rempli {
-            opacity: 1;
+          &:hover {
+            & .coeur--vide {
+              opacity: 0;
+            }
+            & .coeur--rempli {
+              opacity: 1;
+            }
           }
         }
       }
@@ -187,5 +194,38 @@
   100% {
     opacity: 0;
     transform: scale(0);
+  }
+}
+
+@media screen and (min-width: 560px) {
+  /* FONCTIONNEMENT */
+  .fonctionnement {
+    margin: 50px 0px;
+    &__titre {
+      text-align: center;
+    }
+    &__blocks {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      &__block {
+        min-width: 270px;
+      }
+    }
+  }
+
+  /* RESTAURANTS */
+  .restaurants {
+    &__titre {
+      margin: 0 25px;
+    }
+    &__cartes {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      &__carte {
+        min-width: 215px;
+      }
+    }
   }
 }

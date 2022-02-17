@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Ohmyfood!</title>
 </head>
 <body>
     <div class="blocGeneral">
+        <div id="blocSpinner">
+            <div id="cadreSpinner">
+                <div id="cercle"></div>
+                <h3>Chargement</h3>
+            </div>
+        </div>
         <header class="header">
             <h1 class="header__titre">ohmyfood</h1>
         </header>
@@ -128,15 +134,12 @@
         <footer class="footer">
             <h1 class="footer__titre">ohmyfood</h1>
             <ul class="footer__liste">
-                <li>Proposer un restaurant</li>
-                <li>Devenir un partenaire</li>
+                <li class="footer__liste--icone">Proposer un restaurant</li>
+                <li class="footer__liste--icone2">Devenir un partenaire</li>
                 <li>Mention légales</li>
-                <li>Contact</li>
+                <li><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
             </ul>
         </footer>
-    </div>
-    <div id="blocSpinner">
-        <h3>Chargement</h3>
     </div>
 </body>
 </html>

@@ -1,14 +1,30 @@
-.footer{
-    background-color: #323435;
-    padding: 25px;
-    &__titre{
-        color: rgb(255, 248, 248);
-        font-size: 16px;
-        font-weight: 300;
+.footer {
+  background-color: #323435;
+  padding: 25px;
+  &__titre {
+    color: rgb(255, 248, 248);
+    font-size: 16px;
+    font-weight: 300;
+  }
+  &__liste {
+    margin-top: 10px;
+    color: rgb(255, 248, 248);
+    list-style: none;
+    & a {
+      color: rgb(255, 248, 248);
+      text-decoration: none;
     }
-    &__liste{
-        margin-top: 10px;
-        color: rgb(255, 248, 248);
-        list-style: none;
+    &--icone::before {
+      font-family: FontAwesome !important;
+      content: "\f2e7";
+      font-size: 14px;
+      margin-right: 13px;
     }
+    &--icone2::before {
+      font-family: FontAwesome !important;
+      content: "\f4c4";
+      font-size: 14px;
+      margin-right: 8px;
+    }
+  }
 }

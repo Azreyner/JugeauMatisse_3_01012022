@@ -47,6 +47,22 @@ body {
   color: #fff8f8;
   list-style: none;
 }
+.footer__liste a {
+  color: #fff8f8;
+  text-decoration: none;
+}
+.footer__liste--icone::before {
+  font-family: FontAwesome !important;
+  content: "\f2e7";
+  font-size: 14px;
+  margin-right: 13px;
+}
+.footer__liste--icone2::before {
+  font-family: FontAwesome !important;
+  content: "\f4c4";
+  font-size: 14px;
+  margin-right: 8px;
+}
 
 .header {
   display: flex;
@@ -55,6 +71,15 @@ body {
   justify-content: center;
   box-shadow: 0px 3px 0px #afafaf, 0px 0px 0px #888;
   padding: 10px 0px;
+}
+.header .flecheRetour {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 25px;
+  top: 27px;
 }
 
 .unBouton {
@@ -83,28 +108,36 @@ body {
 
 /* SPINNER */
 #blocSpinner {
-  height: 400px;
-  width: 470px;
+  height: 100%;
+  width: 100%;
   border-radius: 15px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  margin-top: 50px;
   position: absolute;
   z-index: 1;
-  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.1);
-  background: white;
+  background: rgba(255, 255, 255, 0.6);
   animation: insideBloc 1s 3s forwards;
 }
-#blocSpinner h3 {
-  margin-bottom: -100px;
+#blocSpinner #cadreSpinner {
+  position: fixed;
+  margin-top: 200px;
+  background-color: white;
+  border-radius: 15px;
+  width: 400px;
+  height: 250px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.1);
 }
-#blocSpinner h3::before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  top: 40%;
-  left: 45%;
+#blocSpinner #cadreSpinner h3 {
+  margin-bottom: 50px;
+}
+#blocSpinner #cadreSpinner #cercle {
+  position: relative;
+  top: -25%;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -230,7 +263,7 @@ body {
 }
 .restaurants__cartes__carte .infosRestaurant .coeur--rempli {
   position: relative;
-  top: -21px;
+  top: -19px;
   opacity: 0;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
@@ -333,6 +366,36 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.menu__titre .coeur {
+  cursor: pointer;
+}
+.menu__titre .coeur--vide {
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+.menu__titre .coeur--rempli {
+  position: relative;
+  top: -21px;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+.menu__titre .coeur--rempli .fas {
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  line-height: 1;
+  z-index: 1;
+  background: -webkit-linear-gradient(#9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__titre .coeur:hover .coeur--vide {
+  opacity: 0;
+}
+.menu__titre .coeur:hover .coeur--rempli {
+  opacity: 1;
 }
 .menu__etapes {
   width: 100%;

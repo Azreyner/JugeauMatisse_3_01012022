@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Ohmyfood!</title>
 </head>
 <body>
     <div class="blocGeneral">
         <header class="header">
+            <a href="./Accueil.html">
+                <i class="fa-solid fa-arrow-left-long fa-lg flecheRetour"></i>
+            </a>
             <h1 class="header__titre">ohmyfood</h1>
         </header>
         <main class="unMenu">
@@ -18,7 +21,14 @@
             <div class="menu">
                 <div class="menu__titre">
                     <h2>Le délice des sens</h2>
-                    <i class="far fa-heart fa-lg"></i>
+                    <div class="coeur">
+                        <div class="coeur--vide">
+                            <i class="far fa-heart fa-lg"></i>
+                        </div>
+                        <div class="coeur--rempli">
+                            <i class="fas fa-heart fa-lg"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="menu__etapes">
                     <div class="menu__etapes__etape" id="entrees">
@@ -169,7 +179,7 @@
                 <li>Proposer un restaurant</li>
                 <li>Devenir un partenaire</li>
                 <li>Mention légales</li>
-                <li>Contact</li>
+                <li><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
             </ul>
         </footer>
     </div>

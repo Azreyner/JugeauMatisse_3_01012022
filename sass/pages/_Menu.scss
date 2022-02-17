@@ -40,6 +40,44 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    & .coeur {
+      cursor: pointer;
+      &--vide {
+        opacity: 1;
+        -webkit-transition: opacity 1s;
+        transition: opacity 1s;
+      }
+      &--rempli {
+        position: relative;
+        top: -21px;
+        opacity: 0;
+        -webkit-transition: opacity 1s;
+        transition: opacity 1s;
+        & .fas {
+          -webkit-transition: opacity 1s;
+          transition: opacity 1s;
+          line-height: 1;
+          z-index: 1;
+          background: -webkit-linear-gradient(
+            #9356dc,
+            #b35cdc,
+            #cf64dc,
+            #e86edb,
+            #ff79da
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      &:hover {
+        & .coeur--vide {
+          opacity: 0;
+        }
+        & .coeur--rempli {
+          opacity: 1;
+        }
+      }
+    }
   }
   &__etapes {
     width: 100%;

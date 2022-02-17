@@ -1,34 +1,42 @@
 /* SPINNER */
 #blocSpinner {
-  height: 400px;
-  width: 470px;
+  height: 100%;
+  width: 100%;
   border-radius: 15px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  margin-top: 50px;
   position: absolute;
   z-index: 1;
-  @include boxshadow;
-  background: white;
+  background: rgba(255, 255, 255, 0.6);
   animation: insideBloc 1s 3s forwards;
-  & h3 {
-    margin-bottom: -100px;
-  }
-  & h3::before {
-    content: "";
-    box-sizing: border-box;
-    position: absolute;
-    top: 40%;
-    left: 45%;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 3px solid #9356dc;
-    border-top-color: #b35cdc;
-    border-right-color: #cf64dc;
-    border-bottom-color: #ff79da;
-    animation: spinner 0.6s linear infinite;
+  & #cadreSpinner {
+    position: fixed;
+    margin-top: 200px;
+    background-color: white;
+    border-radius: 15px;
+    width: 400px;
+    height: 250px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    @include boxshadow;
+    & h3 {
+      margin-bottom: 50px;
+    }
+    & #cercle {
+      position: relative;
+      top: -25%;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 3px solid #9356dc;
+      border-top-color: #b35cdc;
+      border-right-color: #cf64dc;
+      border-bottom-color: #ff79da;
+      animation: spinner 0.6s linear infinite;
+    }
   }
 }
 
@@ -146,7 +154,7 @@
           }
           &--rempli {
             position: relative;
-            top: -21px;
+            top: -19px;
             opacity: 0;
             -webkit-transition: opacity 1s;
             transition: opacity 1s;
